@@ -1,4 +1,4 @@
-FROM ghcr.io/astral-sh/uv:python3.13-alpine
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
 
 # Makes install into the system Python
 ENV UV_SYSTEM_PYTHON=true
