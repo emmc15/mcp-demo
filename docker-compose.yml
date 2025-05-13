@@ -1,0 +1,15 @@
+services:
+  mcp-demo:
+    image: emmc15/mcp-demo:latest
+    container_name: mcp-demo
+    restart: unless-stopped
+    environment:
+      - UID=${UID:-1000}
+      - GID=${GID:-1000}
+      - USERNAME=${USERNAME}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/workspace
+    entrypoint: ["sleep", "infinity"] 
